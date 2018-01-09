@@ -2,9 +2,9 @@
 /**
  * The template for displaying archive pages
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Wonkasoft
+ * @package WonkasoftTheme
  */
 
 get_header(); ?>

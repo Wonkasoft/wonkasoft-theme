@@ -2,9 +2,9 @@
 /**
  * Template part for displaying page content in page.php
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Wonkasoft
+ * @package WonkasoftTheme
  */
 
 ?>
@@ -13,6 +13,8 @@
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
+
+	<?php wonkasoft_theme_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php

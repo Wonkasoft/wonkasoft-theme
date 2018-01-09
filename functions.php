@@ -1,10 +1,10 @@
 <?php
 /**
- * Wonkasoft functions and definitions
+ * WonkasoftTheme functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Wonkasoft
+ * @package WonkasoftTheme
  */
 
 if ( ! function_exists( 'wonkasoft_theme_setup' ) ) :
@@ -19,7 +19,7 @@ if ( ! function_exists( 'wonkasoft_theme_setup' ) ) :
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on Wonkasoft, use a find and replace
+		 * If you're building a theme based on WonkasoftTheme, use a find and replace
 		 * to change 'wonkasoft-theme' to the name of your theme in all the template files.
 		 */
 		load_theme_textdomain( 'wonkasoft-theme', get_template_directory() . '/languages' );

@@ -2,9 +2,9 @@
 /**
  * Template part for displaying posts
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Wonkasoft
+ * @package WonkasoftTheme
  */
 
 ?>
@@ -25,6 +25,8 @@
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
+
+	<?php wonkasoft_theme_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
