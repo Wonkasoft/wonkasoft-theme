@@ -5,6 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package WonkasoftTheme
+ * @since  1.0.0 [<init setup>]
  */
 
 if ( ! function_exists( 'wonkasoft_theme_setup' ) ) :
@@ -45,6 +46,14 @@ if ( ! function_exists( 'wonkasoft_theme_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'wonkasoft-theme' ),
+		) );
+
+		register_nav_menus( array(
+			'information-menu' => esc_html__( 'Information-Menu', 'wonkasoft-theme' ),
+		) );
+
+		register_nav_menus( array(
+			'services-menu' => esc_html__( 'Services-Menu', 'wonkasoft-theme' ),
 		) );
 
 		/*
@@ -117,11 +126,19 @@ add_action( 'widgets_init', 'wonkasoft_theme_widgets_init' );
  * Enqueue scripts and styles.
  */
 function wonkasoft_theme_scripts() {
+	wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' );
+
+	wp_enqueue_style( 'fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
+
 	wp_enqueue_style( 'wonkasoft-theme-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'wonkasoft-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'popperjs', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', array(), 'all', true );
 
-	wp_enqueue_script( 'wonkasoft-theme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'bootstrapjs', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', array( 'jQuery' ), 'all', true );
+
+	wp_enqueue_script( 'wonkasoft-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20180129', true );
+
+	wp_enqueue_script( 'wonkasoft-theme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20180129', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
