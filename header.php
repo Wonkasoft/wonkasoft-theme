@@ -43,7 +43,7 @@
 				endif; ?>
 			</div><!-- .site-branding -->
 
-			<div class="col-6 social-icons">
+			<div class="col-6 social-icons text-center">
 				<i class="fa fa-facebook"></i>
 				<i class="fa fa-twitter"></i>
 				<i class="fa fa-instagram"></i>
@@ -62,7 +62,7 @@
 			</div> <!-- /contact-info -->
 		</div> <!-- /row -->
 		<div class="row">
-			<nav id="site-navigation" class="col-sm-9 main-navigation">
+			<nav id="site-navigation" class="col-sm-9 main-navigation text-center">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'wonkasoft-theme' ); ?></button>
 				<?php
 					wp_nav_menu( array(
