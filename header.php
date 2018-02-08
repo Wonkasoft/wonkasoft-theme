@@ -25,7 +25,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wonkasoft-theme' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="row">
+		<div class="row row-w-logo">
 			<div class="site-branding col-3">
 				<?php
 				the_custom_logo();
@@ -61,7 +61,7 @@
 				</div> <!-- /contact-links -->
 			</div> <!-- /contact-info -->
 		</div> <!-- /row -->
-		<div class="row">
+		<div class="row row-w-nav">
 			<nav id="site-navigation" class="col-sm-9 main-navigation text-center">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'wonkasoft-theme' ); ?></button>
 				<?php
