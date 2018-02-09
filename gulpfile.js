@@ -128,8 +128,10 @@ gulp.task('imgPress', function() {
 gulp.task('watch', function() {
 
 	gulp.watch('**/*.php').on('change', browserSync.reload);
- 
-	gulp.watch('./sass/*/*.scss', ['sass', 'sass2']).on('change', browserSync.reload);
+       
+       gulp.watch('./sass/*/*.scss', ['sass', 'sass2']).on('change', browserSync.reload);
+	
+       gulp.watch('./sass/*/*/*.scss', ['sass', 'sass2']).on('change', browserSync.reload);
  
 	gulp.watch('./js/*.*', ['js']).on('change', browserSync.reload);
  

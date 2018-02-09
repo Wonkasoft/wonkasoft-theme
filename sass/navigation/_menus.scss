@@ -1,18 +1,75 @@
 .row-w-nav {
-	background: #d3d3d3;
+	background: $nav__background;
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		width: 100%;
+		display: block;
+		height: 6px;
+		background: #fff;
+		z-index: 100;
+	}
+	.account-links {
+		a {
+			margin: 0 -1px;
+			transform: matrix(1,0,0,1,0,0);
+		}
+		.wonka-btn {
+			border-radius: 0;
+			padding: 24px;
+		}
+		i {
+			position: absolute;
+			font-size: 34px;
+			color: #17252e;
+			top: 50%;
+			right: 16%;
+			cursor: pointer;
+			transform: translate(-50%, -50%);
+		}
+		form {
+			display: inline-block;
+			width: 48.8%;
+			float: right;
+			label {
+				margin: 0;
+			}
+			input[type="search"] {
+				display: none;
+				opacity: 0;
+				left: 100%;
+				position: absolute;
+				top: calc(100% + 2px);
+				line-height: 1.5;
+				border-radius: 0;
+				padding: 15px;
+				@include prefix( box-shadow, 2px 6px 6px 1px rgba(0,0,0,0.5), webkit moz o );
+				@include prefix( transition, all 0.2s ease-in-out, webkit moz o );
+				z-index: 999;
+			}
+			input[type="submit"] {
+				display: none;
+			}
+		}
+	}
 }
 
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
 	width: 100%;
 
+	.menu-main-container {
+		height: 71px;
+	}
 	ul {
 		display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+		text-align: justify;
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -59,12 +116,20 @@
 
 		&:hover > a,
 		&.focus > a {
+			color: $nav__hover;
 		}
 	}
 
 	a {
 		display: block;
 		text-decoration: none;
+		color: $header__background;
+		font-family: $font__main;
+		font-weight: 800;
+		font-size: 24px;
+		text-transform: uppercase;
+		padding: 20px 25px;
+		@include prefix( transition, all 0.2s ease-in-out, webkit moz o);
 	}
 
 	.current_page_item > a,
@@ -85,7 +150,7 @@
 		display: none;
 	}
 	.main-navigation ul {
-		display: block;
+		display: inline-block;
 	}
 }
 

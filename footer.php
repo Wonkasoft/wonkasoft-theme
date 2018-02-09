@@ -12,9 +12,8 @@
 
 ?>
 
-	</div><!-- #content -->
-
 	<footer id="colophon" class="site-footer">
+		<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm">
 				<h3 class="footer-header">Get a Quote</h3>
@@ -61,6 +60,7 @@
 				</ul>
 			</div> <!-- /col-sm-4 -->
 		</div> <!-- /row -->
+		<div class="row">
 		<div class="site-info">
 			&copy; <?php echo date( 'Y' ); ?> All rights reserved
 			<span class="sep"> | </span>
@@ -69,6 +69,8 @@
 				printf( esc_html__( 'Created by: %1$s', 'wonkasoft-theme' ), '<a href="https://wonkasoft.com">Wonkasoft</a>' );
 			?>
 		</div><!-- .site-info -->
+		</div> <!-- /row -->
+	</div> <!-- /container -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

@@ -25,6 +25,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wonkasoft-theme' ); ?></a>
 
 	<header id="masthead" class="site-header">
+		<div class="container-fluid">
 		<div class="row row-w-logo">
 			<div class="site-branding col-3">
 				<?php
@@ -57,7 +58,7 @@
 					Questions? Contact Support:
 				</div> <!-- /contact-message -->
 				<div class="col-sm col-12 contact-links">
-					<i class="fa fa-commenting">Support Chat</i> <i class="fa fa-phone">951-201-6639</i>
+					<i class="fa fa-commenting"></i><span>Support Chat</span> <i class="fa fa-phone"></i><span>951-201-6639</span>
 				</div> <!-- /contact-links -->
 			</div> <!-- /contact-info -->
 		</div> <!-- /row -->
@@ -72,10 +73,10 @@
 				?>
 			</nav><!-- #site-navigation -->
 			<div class="col-sm-3 account-links">
-				<a href="#" class="btn btn-light">Login</a>
-				<a href="#" class="btn btn-light">Sign-Up</a>
+				<a href="#" class="btn btn-light wonka-btn">Login</a>
+				<a href="#" class="btn btn-light wonka-btn">Sign-Up</a>
 				<?php get_search_form(); ?>
 			</div> <!-- /account-links -->
+			</div> <!-- /row -->
+		</div> <!-- /container-fluid -->
 	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
