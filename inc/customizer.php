@@ -527,6 +527,81 @@ function wonkasoft_theme_customize_register( $wp_customize ) {
 		'type'				=> 'textarea',
 		'description'	=> 'Enter brand mission',
 	) ) );
+	/**
+	 * End of Brand Message Section
+	 */
+	/**
+	 * 
+	 * Newsletter Section
+	 * @since  1.0.0
+	 * 
+	 */
+	// Adding customizer section for brand message section
+	$wp_customize->add_section( 'newsletter_section' , array(
+		'capability'     	=> 'edit_theme_options',
+		'theme_supports' 	=> '',
+		'priority'				=> 11,
+		'title'						=> __( 'Newsletter Section', 'wonkasoft-theme' ),
+		'description'			=> __( 'Newsletter Options', 'wonkasoft-theme' ),
+		'panel'  					=> 'ft_theme_options',
+	) );
+	// Newsletter Setting
+	$wp_customize->add_setting( 'newsletter_form' , array(
+		'default'   => '',
+		'transport' => 'refresh',
+	) );
+
+	// Newsletter Control
+	$wp_customize->add_control( new WP_Customize_Control( 
+		$wp_customize, 
+		'newsletter_form', 
+		array(
+		'label'      	=> __( 'Newsletter Form', 'wonkasoft-theme' ),
+		'section'    	=> 'newsletter_section',
+		'setting'   	=> 'newsletter_form',
+		'type'				=> 'text',
+		'description'	=> 'Enter shortcode for wpforms',
+	) ) );
+
+	/**
+	 * End of Newsletter Section
+	 */
+	/**
+	 * 
+	 * Footer Section
+	 * @since  1.0.0
+	 * 
+	 */
+	// Adding customizer section for brand message section
+	$wp_customize->add_section( 'footer_section' , array(
+		'capability'     	=> 'edit_theme_options',
+		'theme_supports' 	=> '',
+		'priority'				=> 11,
+		'title'						=> __( 'Footer Section', 'wonkasoft-theme' ),
+		'description'			=> __( 'Footer Options', 'wonkasoft-theme' ),
+		'panel'  					=> 'ft_theme_options',
+	) );
+	// Footer Form Setting
+	$wp_customize->add_setting( 'footer_form' , array(
+		'default'   => '',
+		'transport' => 'refresh',
+	) );
+
+	// Newsletter Control
+	$wp_customize->add_control( new WP_Customize_Control( 
+		$wp_customize, 
+		'footer_form', 
+		array(
+		'label'      	=> __( 'Footer Form', 'wonkasoft-theme' ),
+		'section'    	=> 'footer_section',
+		'setting'   	=> 'footer_form',
+		'type'				=> 'text',
+		'description'	=> 'Enter shortcode for wpforms',
+	) ) );
+
+	/**
+	 * End of footer section
+	 */
 }
 add_action( 'customize_register', 'wonkasoft_theme_customize_register' );
 
