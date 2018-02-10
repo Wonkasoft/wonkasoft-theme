@@ -92,6 +92,38 @@ get_header(); ?>
 	</section> <!-- #product-section -->
 	<section id="logos-section">
 	</section> <!-- #logo-section -->
+	<section id="services-section">
+	</section> <!-- #services-section -->
+	<section id="team-section">
+	</section> <!-- #team-section -->
+	<section id="work-section">
+	</section> <!-- #work-section -->
+	<section id="responsive-section">
+	</section> <!-- #responsive-section -->
+	<section id="vision-section">
+	</section> <!-- #vision-section -->
+	<section id="testimonals-section">
+	</section> <!-- #testimonals-section -->
+	<section id="recent-post-section">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-3"><h2>Recent Posts</h2></div>
+			</div> <!-- /row -->
+			<div class="row">
+				<div class="col"></div>
+				<div class="col"></div>
+				<div class="col"></div>
+			</div> <!-- /row -->
+		</div> <!-- /container-fluid -->
+	</section> <!-- #recent-post-section -->
+	<section id="newsletter-section">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-4 align-self-center text-center"><h2>Get News and Updates!</h2></div>
+				<div class="col-7 newsletter-form"><?php echo do_shortcode( get_theme_mod( 'newsletter_form' ) ); ?></div>
+			</div> <!-- /row -->
+		</div> <!-- /container-fluid -->
+	</section> <!-- #newsletter-section -->
 </main><!-- /#main -->
 <?php
 get_footer();

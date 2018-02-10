@@ -12,6 +12,7 @@
 		z-index: 100;
 	}
 	.account-links {
+		position: relative;
 		a {
 			margin: 0 -1px;
 			transform: matrix(1,0,0,1,0,0);
@@ -30,8 +31,11 @@
 			transform: translate(-50%, -50%);
 		}
 		form {
+			position: absolute;
 			display: inline-block;
-			width: 48.8%;
+			width: 96.5%;
+			height: 100%;
+			right: 0;
 			float: right;
 			label {
 				margin: 0;
@@ -40,6 +44,7 @@
 				display: none;
 				opacity: 0;
 				left: 100%;
+				width: 100%;
 				position: absolute;
 				top: calc(100% + 2px);
 				line-height: 1.5;

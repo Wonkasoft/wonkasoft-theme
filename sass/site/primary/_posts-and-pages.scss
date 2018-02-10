@@ -144,6 +144,90 @@
 	}
 }
 
+#logos-section {
+	position: relative;
+	height: 150px;
+	background: $header__background;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		width: 100%;
+		display: block;
+		height: 6px;
+		background: #fff;
+		z-index: 100;
+	}
+}
+
+#services-section {
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		width: 100%;
+		display: block;
+		height: 6px;
+		background: linear-gradient( -213deg, $product__sectionlite 100%, $product__sectiondark 100% );
+		z-index: 100;
+	}
+}
+
+#recent-post-section {
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		width: 100%;
+		display: block;
+		height: 6px;
+		background: #e0e0e0;
+		z-index: 100;
+	}
+}
+
+#newsletter-section {
+	position: relative;
+	background: #e0e0e0;
+	h2 {
+		white-space: nowrap;
+		font-size: 34px;
+		font-weight: 800;
+		color: $header__background;
+	}
+	.newsletter-form {
+		padding: 10px 0;
+		align-self: center;
+		.wpforms-container {
+			margin: 0;
+			.wpforms-field-container {
+				width: calc(100% - 200px);
+				padding: 0;
+				.wpforms-field-required {
+					height: 48px;
+				}
+			}
+			.wpforms-submit-container {
+				margin-top: 6px;
+				width: 185px;
+			}
+			.wonka-btn {
+				background: $header__background;
+				color: #fff;
+				font-weight: 600;
+				border-radius: 4px;
+				text-transform: uppercase;
+				white-space: nowrap;
+			}
+		}
+	}
+	input {
+		display: inline-block;
+	}
+}
+
 .hentry {
 	margin: 0 0 1.5em;
 }

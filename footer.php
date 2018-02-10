@@ -17,7 +17,7 @@
 		<div class="row">
 			<div class="col-sm">
 				<h3 class="footer-header">Get a Quote</h3>
-				<?php echo do_shortcode( '[wpforms id="31"]' ); ?>
+				<?php echo do_shortcode( get_theme_mod( 'footer_form' ) ); ?>
 			</div> <!-- /col-sm-4 -->
 			
 			<div class="col-sm">
@@ -66,7 +66,7 @@
 			<span class="sep"> | </span>
 			<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Created by: %1$s', 'wonkasoft-theme' ), '<a href="https://wonkasoft.com">Wonkasoft</a>' );
+				printf( esc_html__( 'Designed and developed by: %1$s', 'wonkasoft-theme' ), '<a href="https://wonkasoft.com">Wonkasoft</a>' );
 			?>
 		</div><!-- .site-info -->
 		<div class="col-6 social-icons text-center">
