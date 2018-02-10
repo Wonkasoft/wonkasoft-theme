@@ -274,6 +274,24 @@ function wonkasoft_theme_customize_register( $wp_customize ) {
 		'description'	=> 'Select CTA Link Page',
 	) ) );
 
+	// Main CTA Text Setting
+	$wp_customize->add_setting( 'main_section_cta_text' , array(
+		'default'   => '',
+		'transport' => 'refresh',
+	) );
+
+		// Main CTA Text Control
+	$wp_customize->add_control( new WP_Customize_Control( 
+		$wp_customize, 
+		'main_section_cta_text', 
+		array(
+		'label'      	=> __( 'Main CTA Text', 'wonkasoft-theme' ),
+		'section'    	=> 'main_section',
+		'setting'   	=> 'main_section_cta_text',
+		'type'				=> 'text',
+		'description'	=> 'Select CTA Text',
+	) ) );
+
 	/**
 	 * End of Main section
 	 * 

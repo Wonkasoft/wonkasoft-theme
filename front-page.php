@@ -12,7 +12,7 @@
  * @package WonkasoftTheme
  */
 
-$header_media = ( !get_theme_mod( 'featured_header_media' ) ) ? get_template_directory_uri() . '/assets/img/default.jpg': get_theme_mod( 'featured_header_media' );
+$header_media = ( !get_theme_mod( 'featured_media' ) ) ? get_template_directory_uri() . '/assets/img/default.jpg': get_theme_mod( 'featured_media' );
 get_header(); ?>
 <main id="main">
 	<section id="above-fold">
@@ -20,11 +20,13 @@ get_header(); ?>
 			<div class="row">
 				<div id="header-media-wrap" class="col-sm-12">
 					<div class="main-img">
-						<img src="<?php echo $header_media; ?>" class="header-media img-responsive" alt="Header Media" />
+						<video id="video" preload="none" loop muted autoplay poster="<?php echo get_theme_mod( 'featured_media' );?>" class="fullscreen-bg__video">
+        			<source src="<?php echo wp_get_attachment_url( get_theme_mod( 'featured_media' ) ); ?>" type="video/mp4">
+    				</video>
 					</div> <!-- /main-img -->
-					<div class="col-xs-12 col-md-4 header-message text-center pull-right"><h2><?php echo get_theme_mod( 'header_message' ); ?></h2>
+					<div class="col-xs-12 col-md-4 header-message text-center pull-right"><h2><?php echo get_theme_mod( 'main_section_message' ); ?></h2>
 						<?php
-						$header_cta_link = get_permalink( get_theme_mod( 'header_cta_link' ) );
+						$header_cta_link = get_permalink( get_theme_mod( 'main_section_cta_link' ) );
 						$header_cta_text = get_theme_mod( 'header_cta_text' );
 						?>
 						<a href="<?php echo $header_cta_link; ?>" class="btn btn-light wonka-btn"><?php echo $header_cta_text; ?>Shop Now</a>
