@@ -44,34 +44,35 @@
 	}
 }
 
-#header-media-wrap {
-	position: relative;
-	padding: 0;
-	.header-message {
-		position: absolute;
-		top: 50%;
-		right: 0;
-		@include prefix( transform, translateY(-50%), webkit moz o );
-		z-index: 100;
-		h2 {
-			padding: 15px;
-			background: rgba(#fff, 0.8);
-		}
-	}
-}
 
 #above-fold {
 	height: 600px;
 	overflow: hidden;
-	.wonka-btn {
-		border-radius: 0;
-		padding: 15px 30px;
-		font-size: 26px;
-		font-family: Open Sans;
-		font-weight: 800;
-	}
-	img {
-		width: 100%;
+	#header-media-wrap {
+		position: relative;
+		padding: 0;
+		.header-message {
+			position: absolute;
+			top: 35%;
+			right: 0;
+			@include prefix( transform, translateY(-50%), webkit moz o );
+			z-index: 100;
+			p {
+				padding: 15px;
+				text-align: left;
+				background: rgba(#fff, 0.7);
+			}
+			.wonka-btn {
+				border-radius: 0;
+				padding: 15px 30px;
+				font-size: 26px;
+				font-family: Open Sans;
+				font-weight: 800;
+			}
+		}
+		img {
+			width: 100%;
+		}
 	}
 }
 

@@ -21,11 +21,20 @@ get_header(); ?>
 			<div class="row">
 				<div id="header-media-wrap" class="col-sm-12">
 					<div class="main-img">
-						<video id="video" preload="none" loop muted autoplay poster="<?php echo $featured_fallback_media; ?>" class="fullscreen-bg__video">
-        			<source src="<?php echo wp_get_attachment_url( $header_media ); ?>" type="video/mp4">
-    				</video>
+						<?php
+						if ( !get_theme_mod( 'featured_media' ) && !get_theme_mod( 'featured_fallback_media' ) ) : ?>
+							<img class="default-img" src="<?php echo $header_media; ?>" />
+						
+						<?php elseif ( !get_theme_mod( 'featured_media' ) && get_theme_mod( 'featured_fallback_media' ) ) : ?>
+							<img class="custom-img" src="<?php echo get_theme_mod( 'featured_fallback_media' ); ?>" />
+
+						<?php else : ?>
+							<video id="video" preload="none" loop muted autoplay poster="<?php echo $featured_fallback_media; ?>" class="fullscreen-bg__video">
+	        			<source src="<?php echo wp_get_attachment_url( $header_media ); ?>" type="video/mp4">
+	    				</video>
+						<?php endif; ?>
 					</div> <!-- /main-img -->
-					<div class="col-xs-12 col-md-4 header-message text-center pull-right"><h2><?php echo get_theme_mod( 'main_section_message' ); ?></h2>
+					<div class="col-xs-12 col-md-4 header-message text-center pull-right"><p><?php echo get_theme_mod( 'main_section_message' ); ?></p>
 						<?php
 						$header_cta_link = get_permalink( get_theme_mod( 'main_section_cta_link' ) );
 						$header_cta_text = get_theme_mod( 'main_section_cta_text' );
