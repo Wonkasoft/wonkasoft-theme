@@ -22,12 +22,12 @@ get_header(); ?>
 					<div class="main-img">
 						<img src="<?php echo $header_media; ?>" class="header-media img-responsive" alt="Header Media" />
 					</div> <!-- /main-img -->
-					<div class="col-xs-12 col-md-4 header-message text-center pull-right"><h2><?php echo get_theme_mod( 'header_message' ); ?></h2>
+					<div class="col-xs-12 col-md-4 header-message text-center pull-right"><h2><?php echo get_theme_mod( 'main_section_message' ); ?></h2>
 						<?php
-						$header_cta_link = get_permalink( get_theme_mod( 'header_cta_link' ) );
-						$header_cta_text = get_theme_mod( 'header_cta_text' );
+						$header_cta_link = get_permalink( get_theme_mod( 'main_section_cta_link' ) );
+						$header_cta_text = get_theme_mod( 'main_section_cta_text' );
 						?>
-						<a href="<?php echo $header_cta_link; ?>" class="btn btn-light wonka-btn"><?php echo $header_cta_text; ?>Shop Now</a>
+						<a href="<?php echo $header_cta_link; ?>" class="btn btn-light wonka-btn"><?php echo $header_cta_text; ?></a>
 					</div><!-- /col-xs-4 header-message text-center -->
 				</div> <!-- /col-xs-12 -->
 			</div> <!-- /row -->
@@ -107,7 +107,7 @@ get_header(); ?>
 	<section id="recent-post-section">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-3"><h2>Recent Posts</h2></div>
+				<div class="section-title"><h2>Recent Posts</h2></div>
 			</div> <!-- /row -->
 			<div class="row">
 				<div class="col"></div>

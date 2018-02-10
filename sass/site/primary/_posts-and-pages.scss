@@ -176,6 +176,7 @@
 
 #recent-post-section {
 	position: relative;
+	height: 300px;
 	&:before {
 		content: "";
 		position: absolute;
@@ -185,6 +186,17 @@
 		height: 6px;
 		background: #e0e0e0;
 		z-index: 100;
+	}
+	.section-title {
+		background: #e0e0e0;
+		padding: 10px 20px;
+	}
+	h2 {
+		white-space: nowrap;
+		color: #3cc2a5;
+		font-size: 34px;
+		font-weight: 800;
+		text-transform: uppercase;
 	}
 }
 
