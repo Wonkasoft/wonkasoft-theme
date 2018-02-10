@@ -30,7 +30,11 @@ get_header(); ?>
 						$header_cta_link = get_permalink( get_theme_mod( 'main_section_cta_link' ) );
 						$header_cta_text = get_theme_mod( 'main_section_cta_text' );
 						?>
+<<<<<<< HEAD
 						<a href="<?php echo $header_cta_link; ?>" class="btn btn-light wonka-btn"><?php echo $header_cta_text; ?><?php echo $header_cta_text; ?></a>
+=======
+						<a href="<?php echo $header_cta_link; ?>" class="btn btn-light wonka-btn"><?php echo $header_cta_text; ?></a>
+>>>>>>> fada7a5ef7b7cfa9aa64c53cc220e79d756123c9
 					</div><!-- /col-xs-4 header-message text-center -->
 				</div> <!-- /col-xs-12 -->
 			</div> <!-- /row -->
@@ -110,7 +114,7 @@ get_header(); ?>
 	<section id="recent-post-section">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-3"><h2>Recent Posts</h2></div>
+				<div class="section-title"><h2>Recent Posts</h2></div>
 			</div> <!-- /row -->
 			<div class="row">
 				<div class="col"></div>
