@@ -238,6 +238,23 @@ function wonkasoft_theme_customize_register( $wp_customize ) {
 		'description'	=> 'Main section Media supports video1080p or image max resolution:1920x1080px',
 	) ) );
 
+	// Main fallback Image Setting
+	$wp_customize->add_setting( 'featured_fallback_media' , array(
+		'default'   => '',
+		'transport' => 'refresh',
+	) );
+
+		// Main Image Control
+	$wp_customize->add_control( new WP_Customize_Media_Control( 
+		$wp_customize, 
+		'featured_fallback_media', 
+		array(
+		'label'      	=> __( 'Featured Main Section Media Fallback ', 'wonkasoft-theme' ),
+		'section'    	=> 'main_section',
+		'setting'   	=> 'featured_fallback_media',
+		'description'	=> 'Main Fallback Media image max resolution:1920x1080px',
+	) ) );
+
 	// Main Message Setting
 	$wp_customize->add_setting( 'main_section_message' , array(
 		'default'   => '',
