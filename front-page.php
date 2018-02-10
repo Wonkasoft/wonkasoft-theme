@@ -103,18 +103,46 @@ get_header(); ?>
 		</div> <!-- /container -->
 	</section> <!-- #product-section -->
 	<section id="logos-section">
+		<div class="container-fluid">
+			<div class="row">
+			</div> <!-- /row -->
+		</div> <!-- /container-fluid -->
 	</section> <!-- #logo-section -->
 	<section id="services-section">
+		<div class="container-fluid">
+			<div class="row">
+			</div> <!-- /row -->
+		</div> <!-- /container-fluid -->
 	</section> <!-- #services-section -->
 	<section id="team-section">
+		<div class="container-fluid">
+			<div class="row">
+			</div> <!-- /row -->
+		</div> <!-- /container-fluid -->
 	</section> <!-- #team-section -->
 	<section id="work-section">
+		<div class="container-fluid">
+			<div class="row">
+			</div> <!-- /row -->
+		</div> <!-- /container-fluid -->
 	</section> <!-- #work-section -->
 	<section id="responsive-section">
+		<div class="container-fluid">
+			<div class="row">
+			</div> <!-- /row -->
+		</div> <!-- /container-fluid -->
 	</section> <!-- #responsive-section -->
 	<section id="vision-section">
+		<div class="container-fluid">
+			<div class="row">
+			</div> <!-- /row -->
+		</div> <!-- /container-fluid -->
 	</section> <!-- #vision-section -->
-	<section id="testimonals-section">
+	<section id="testimonials-section">
+		<div class="container-fluid">
+			<div class="row">
+			</div> <!-- /row -->
+		</div> <!-- /container-fluid -->
 	</section> <!-- #testimonals-section -->
 	<section id="recent-post-section">
 		<div class="container-fluid">
@@ -122,9 +150,9 @@ get_header(); ?>
 				<div class="section-title"><h2>Recent Posts</h2></div>
 			</div> <!-- /row -->
 			<div class="row">
-				<div class="col"></div>
-				<div class="col"></div>
-				<div class="col"></div>
+				<div class="col first-col"></div>
+				<div class="center-col"></div>
+				<div class="col last-col"></div>
 			</div> <!-- /row -->
 		</div> <!-- /container-fluid -->
 	</section> <!-- #recent-post-section -->

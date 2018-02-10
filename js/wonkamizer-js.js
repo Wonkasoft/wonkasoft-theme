@@ -1,5 +1,7 @@
-( function() {
+( function($) {
 	"use strict";
+
+	// vanilla javascript
 	var search_btn = document.querySelector( '#search-btn-toggle' ),
 	search_field = document.querySelector( 'input[type="search"]' );
 
@@ -23,4 +25,18 @@
 		search_field.style.left =  '100%'; 
 		setTimeout( function() { search_field.style.display = 'none'; search_field.value = ''; }, 800);
 	}
-})();
+
+	// enters the jQuery
+	$(document).ready( function() {
+	         $(".scroll-top").hide(); //hide your div initially
+	         var topOfOthDiv = $("#top-of-page").offset().top;
+	         $(window).scroll(function() {
+	             if($(window).scrollTop() > topOfOthDiv) { //scrolled past the other div?
+	                 $(".scroll-top").show(); //reached the desired point -- show div
+	             }
+	             if($(window).scrollTop() < topOfOthDiv) { //scrolled past the other div?
+	               $(".scroll-top").hide(); //hide your div initially
+	             }
+	         });
+	     });
+})(jQuery);

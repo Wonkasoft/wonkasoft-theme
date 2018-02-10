@@ -80,6 +80,7 @@
 		</div> <!-- /row -->
 	</div> <!-- /container -->
 	</footer><!-- #colophon -->
+	<a id="to-top-btn" href="#top-of-page" class="scroll-top text-center text-white js-scroll-trigger">&lsaquo;</a>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
