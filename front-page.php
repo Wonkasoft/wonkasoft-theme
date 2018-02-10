@@ -27,7 +27,7 @@ get_header(); ?>
 						$header_cta_link = get_permalink( get_theme_mod( 'header_cta_link' ) );
 						$header_cta_text = get_theme_mod( 'header_cta_text' );
 						?>
-						<a href="<?php echo $header_cta_link; ?>" class="btn btn-light wonka-btn"><?php echo $header_cta_text; ?></a>
+						<a href="<?php echo $header_cta_link; ?>" class="btn btn-light wonka-btn"><?php echo $header_cta_text; ?>Shop Now</a>
 					</div><!-- /col-xs-4 header-message text-center -->
 				</div> <!-- /col-xs-12 -->
 			</div> <!-- /row -->
@@ -35,7 +35,7 @@ get_header(); ?>
 	</section> <!-- /above-fold -->
 	
 	<section id="product-section">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
 				<div class="col-sm">
 					<div class="row">
@@ -90,6 +90,8 @@ get_header(); ?>
 			</div> <!-- /row -->
 		</div> <!-- /container -->
 	</section> <!-- #product-section -->
-						</main><!-- /#main -->
-						<?php
-						get_footer();
+	<section id="logos-section">
+	</section> <!-- #logo-section -->
+</main><!-- /#main -->
+<?php
+get_footer();

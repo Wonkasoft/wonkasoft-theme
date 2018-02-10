@@ -2,6 +2,11 @@
 	display: block;
 }
 
+#page.site {
+	position: relative;
+	min-height: 100%;
+}
+
 #masthead {
 	background: #17252e;
 	color: #fff;
@@ -55,9 +60,25 @@
 	}
 }
 
+#above-fold {
+	height: 600px;
+	overflow: hidden;
+	.wonka-btn {
+		border-radius: 0;
+		padding: 15px 30px;
+		font-size: 26px;
+		font-family: Open Sans;
+		font-weight: 800;
+	}
+	img {
+		width: 100%;
+	}
+}
+
 #product-section {
 	position: relative;
-	background: $product__sectionbg;
+	height: 200px;
+	background: linear-gradient( -213deg, $product__sectionlite 100%, $product__sectiondark 100% );
 	&:before {
 		content: "";
 		position: absolute;
@@ -67,6 +88,12 @@
 		height: 6px;
 		background: $product__topborder;
 		z-index: 100;
+	}
+	.container-fluid {
+		height: 100%;
+		.row {
+			height: 100%;
+		}
 	}
 	.product-icon {
 		text-align: center;
@@ -113,6 +140,7 @@
 	}
 	.product-copy {
 		padding: 15px 0;
+		align-self: center;
 	}
 }
 
@@ -136,10 +164,41 @@
 }
 
 footer {
+	position: absolute;
+	top: 100%;
+	width: 100%;
 	color: #fff;
 	background: $header__background;
 	h3 {
 		color: $product__topborder;
 		font-weight: 700;
+	}
+	.site-info {
+		position: relative;
+		display: block;
+		padding: 25px;
+		text-align: center;
+		font-family: Roboto;
+		font-weight: 200;
+		a {
+			color: $product__sectionlite;
+			font-weight: normal;
+			@include prefix( transition, all 0.2s ease-in-out, webkit moz o);
+			&:hover {
+				text-decoration: none;
+				font-weight: normal;
+				color: #3ebea3;
+			}
+		}
+	}
+	.social-icons {
+		font-size: 30px;
+		i {
+			padding: 2%;
+			@include prefix( transition, all 0.2s ease-in-out, webkit moz o);
+			&:hover {
+				color: $product__sectionlite;
+			}
+		}
 	}
 }

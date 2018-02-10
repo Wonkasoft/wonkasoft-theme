@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
 sass = require('gulp-sass'),
+sourcemaps = require('gulp-sourcemaps'),
 jshint = require('gulp-jshint'),
 concat = require('gulp-concat'),
 path = require('path'),
@@ -16,125 +17,133 @@ themeName = json.read('./package.json').get('name'),
 siteName = json.read('./package.json').get('siteName'),
 themeDir = '../' + themeName,
 plumberErrorHandler = { errorHandler: notify.onError({
- 
-    title: 'Gulp',
- 
-    message: 'Error: <%= error.message %>'
- 
-  })
- 
+
+	title: 'Gulp',
+
+	message: 'Error: <%= error.message %>'
+
+})
+
 };
 
 gulp.task('default', function(){
- 
-    console.log('default gulp task...');
- 
+
+	console.log('default gulp task...');
+
 });
 
 gulp.task('default', ['sass', 'sass2', 'js', 'imgPress', 'watch', 'browser-sync']);
 
 gulp.task('init', function() {
- 
-  fs.mkdirSync(themeDir, 765, true);
- 
-  fse.copySync('theme-boilerplate', themeDir + '/');
- 
+
+	fs.mkdirSync(themeDir, 765, true);
+
+	fse.copySync('theme-boilerplate', themeDir + '/');
+
 });
 
 // Static server
 gulp.task('browser-sync', function() {
-    browserSync.init({
-        proxy: 'localhost/' + siteName,
-        port: 80
-    });
+	browserSync.init({
+		proxy: 'localhost/' + siteName,
+		port: 80
+	});
 });
 
 gulp.task('sass', function () {
- 
-    gulp.src('./sass/style.scss')
 
-      .pipe(plumber(plumberErrorHandler))
- 
-       .pipe(sass())
+	return gulp.src('./sass/style.scss')
 
-       .pipe(cleanCSS())
+	.pipe(sourcemaps.init())
 
-       .pipe(concat('style.css'))
- 
-       .pipe(gulp.dest('./'))
+	.pipe(plumber(plumberErrorHandler))
 
-       .pipe(browserSync.stream());
- 
+	.pipe(sass())
+
+	.pipe(cleanCSS())
+
+	.pipe(concat('style.css'))
+
+	.pipe(sourcemaps.write('./maps'))
+
+	.pipe(gulp.dest('./'))
+
+	.pipe(browserSync.stream());
+
 });
 
 gulp.task('sass2', function () {
- 
-    gulp.src('./sass/woocommerce.scss')
 
-    	.pipe(plumber(plumberErrorHandler))
- 
-       .pipe(sass())
+	return gulp.src('./sass/woocommerce.scss')
 
-       .pipe(cleanCSS())
+	.pipe(sourcemaps.init())
 
-       .pipe(concat('woocommerce.css'))
- 
-       .pipe(gulp.dest('./'))
+	.pipe(plumber(plumberErrorHandler))
 
-       .pipe(browserSync.stream());
- 
+	.pipe(sass())
+
+	.pipe(cleanCSS())
+
+	.pipe(concat('woocommerce.css'))
+
+	.pipe(sourcemaps.write('./maps'))
+
+	.pipe(gulp.dest('./'))
+
+	.pipe(browserSync.stream());
+
 });
- 
+
 gulp.task('js', function () {
- 
-	gulp.src('./js/wonkamizer-js.js')
 
-		.pipe(plumber(plumberErrorHandler))
- 
-		.pipe(jshint())
- 
-		.pipe(jshint.reporter('fail'))
+	return gulp.src('./js/wonkamizer-js.js')
 
-		.pipe(jsmin())
-		 
-		.pipe(concat(themeName + '.min.js'))
-		 
-		.pipe(gulp.dest('./assets/js'))
+	.pipe(plumber(plumberErrorHandler))
 
-		.pipe(browserSync.stream());
- 
+	.pipe(jshint())
+
+	.pipe(jshint.reporter('fail'))
+
+	.pipe(jsmin())
+
+	.pipe(concat(themeName + '.min.js'))
+
+	.pipe(gulp.dest('./assets/js'))
+
+	.pipe(browserSync.stream());
+
 });
 
 gulp.task('imgPress', function() {
- 
-  gulp.src('./images/*.{png,jpg,jpeg,gif}')
+
+	return gulp.src('./images/*.{png,jpg,jpeg,gif}')
 
 	.pipe(plumber(plumberErrorHandler))
- 
-	.pipe(imagemin({
- 
-      		optimizationLevel: 7,
- 
-      		progressive: true
- 
-    	}))
- 
-    	.pipe(gulp.dest('./assets/img'))
 
-    	.pipe(browserSync.stream());
- 
+	.pipe(imagemin({
+
+		optimizationLevel: 7,
+
+		progressive: true
+
+	}))
+
+	.pipe(gulp.dest('./assets/img'))
+
+	.pipe(browserSync.stream());
+
 });
 
 gulp.task('watch', function() {
 
 	gulp.watch('**/*.php').on('change', browserSync.reload);
-       
-       gulp.watch('./sass/*/*.scss', ['sass', 'sass2']).on('change', browserSync.reload);
-	
-       gulp.watch('./sass/*/*/*.scss', ['sass', 'sass2']).on('change', browserSync.reload);
- 
+
+	gulp.watch('./sass/*/*.scss', ['sass', 'sass2']).on('change', browserSync.reload);
+
+	gulp.watch('./sass/*/*/*.scss', ['sass', 'sass2']).on('change', browserSync.reload);
+
 	gulp.watch('./js/*.*', ['js']).on('change', browserSync.reload);
- 
+
 	gulp.watch('./images/*.{png,jpg,gif}', ['imgPress']).on('change', browserSync.reload);
- 
+
 });

@@ -60,8 +60,8 @@
 				</ul>
 			</div> <!-- /col-sm-4 -->
 		</div> <!-- /row -->
-		<div class="row">
-		<div class="site-info">
+		<div class="row row-last">
+		<div class="col site-info">
 			&copy; <?php echo date( 'Y' ); ?> All rights reserved
 			<span class="sep"> | </span>
 			<?php
@@ -69,6 +69,14 @@
 				printf( esc_html__( 'Created by: %1$s', 'wonkasoft-theme' ), '<a href="https://wonkasoft.com">Wonkasoft</a>' );
 			?>
 		</div><!-- .site-info -->
+		<div class="col-6 social-icons text-center">
+				<i class="fa fa-facebook"></i>
+				<i class="fa fa-twitter"></i>
+				<i class="fa fa-instagram"></i>
+				<i class="fa fa-yelp"></i>
+				<i class="fa fa-git"></i>
+				<i class="fa fa-wordpress"></i>
+			</div> <!-- /social-icons -->
 		</div> <!-- /row -->
 	</div> <!-- /container -->
 	</footer><!-- #colophon -->
