@@ -13,6 +13,7 @@
  */
 
 $header_media = ( !get_theme_mod( 'featured_media' ) ) ? get_template_directory_uri() . '/assets/img/default.jpg': get_theme_mod( 'featured_media' );
+$featured_fallback_media = ( !get_theme_mod( 'featured_fallback_media' ) ) ? get_template_directory_uri() . '/assets/img/default.jpg': get_theme_mod( 'featured_fallback_media' );
 get_header(); ?>
 <main id="main">
 	<section id="above-fold">
@@ -28,7 +29,7 @@ get_header(); ?>
 							<img class="custom-img" src="<?php echo get_theme_mod( 'featured_fallback_media' ); ?>" />
 
 						<?php else : ?>
-							<video id="video" preload="none" loop muted autoplay poster="<?php echo $header_media;?>" class="fullscreen-bg__video">
+							<video id="video" preload="none" loop muted autoplay poster="<?php echo $featured_fallback_media; ?>" class="fullscreen-bg__video">
 	        			<source src="<?php echo wp_get_attachment_url( $header_media ); ?>" type="video/mp4">
 	    				</video>
 						<?php endif; ?>
