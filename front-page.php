@@ -39,7 +39,7 @@ get_header(); ?>
 						$header_cta_link = get_permalink( get_theme_mod( 'main_section_cta_link' ) );
 						$header_cta_text = get_theme_mod( 'main_section_cta_text' );
 						?>
-						<a href="<?php echo $header_cta_link; ?>" class="btn btn-light wonka-btn"><?php echo $header_cta_text; ?><?php echo $header_cta_text; ?></a>
+						<a href="<?php echo $header_cta_link; ?>" class="btn btn-light wonka-btn"><?php echo $header_cta_text; ?></a>
 					</div><!-- /col-xs-4 header-message text-center -->
 				</div> <!-- /col-xs-12 -->
 			</div> <!-- /row -->
@@ -110,13 +110,32 @@ get_header(); ?>
 	</section> <!-- #logo-section -->
 	<section id="services-section">
 		<div class="container-fluid">
+			<div class="row services-title-row">
+				<div class="services-title"><h2>Our Services</h2></div>
+			</div> <!-- /row -->
 			<div class="row">
+				<div class="col-sm"></div>
+				<div class="col-sm"></div>
+				<div class="col-sm"></div>
+				<div class="col-sm"></div>
 			</div> <!-- /row -->
 		</div> <!-- /container-fluid -->
 	</section> <!-- #services-section -->
 	<section id="team-section">
 		<div class="container-fluid">
+			<div class="row team-title-row">
+				<div class="team-title"><h2><b>Meet</b> the <b>Team</b></h2></div>
+			</div> <!-- /row -->
 			<div class="row">
+				<div class="col"></div>
+				<div class="col"></div>
+				<div class="col"></div>
+				<div class="col"></div>
+				<div class="col"></div>
+				<div class="col"></div>
+				<div class="col"></div>
+				<div class="col"></div>
+				<div class="col"></div>
 			</div> <!-- /row -->
 		</div> <!-- /container-fluid -->
 	</section> <!-- #team-section -->
