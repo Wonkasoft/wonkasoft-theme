@@ -355,7 +355,7 @@ function wonkasoft_theme_customize_register( $wp_customize ) {
 		) ) );
 
 		// Featured item title Setting
-		$wp_customize->add_setting( 'featured_section_title_'.$i , array(
+		$wp_customize->add_setting( 'featured_title_'.$i , array(
 			'default'   => '',
 			'transport' => 'refresh',
 		) );
@@ -363,17 +363,17 @@ function wonkasoft_theme_customize_register( $wp_customize ) {
 			// Featured item title Control
 		$wp_customize->add_control( new WP_Customize_Control( 
 			$wp_customize, 
-			'featured_section_title_'.$i, 
+			'featured_title_'.$i, 
 			array(
-			'label'      	=> __( 'Featured Section Title '.$i, 'wonkasoft-theme' ),
+			'label'      	=> __( 'Featured Title '.$i, 'wonkasoft-theme' ),
 			'section'    	=> 'featured_section',
-			'setting'   	=> 'featured_section_title_'.$i,
+			'setting'   	=> 'featured_title_'.$i,
 			'type'				=> 'text',
 			'description'	=> 'Enter featured item '.$i.' title',
 		) ) );
 
 		// Featured item message Setting
-		$wp_customize->add_setting( 'featured_section_message_'.$i , array(
+		$wp_customize->add_setting( 'featured_message_'.$i , array(
 			'default'   => '',
 			'transport' => 'refresh',
 		) );
@@ -381,11 +381,11 @@ function wonkasoft_theme_customize_register( $wp_customize ) {
 			// Featured item message Control
 		$wp_customize->add_control( new WP_Customize_Control( 
 			$wp_customize, 
-			'featured_section_message_'.$i, 
+			'featured_message_'.$i, 
 			array(
-			'label'      	=> __( 'Featured Section Message '.$i, 'wonkasoft-theme' ),
+			'label'      	=> __( 'Featured Message '.$i, 'wonkasoft-theme' ),
 			'section'    	=> 'featured_section',
-			'setting'   	=> 'featured_section_message_'.$i,
+			'setting'   	=> 'featured_message_'.$i,
 			'type'				=> 'textarea',
 			'description'	=> 'Enter featured item '.$i.' message',
 		) ) );
@@ -396,17 +396,17 @@ function wonkasoft_theme_customize_register( $wp_customize ) {
 	 */
 	 /**
 	 * 
-	 * Brand Section
+	 * logo Section
 	 * @since  1.0.0
 	 * 
 	 */
-	// Adding customizer section for brand section
-	$wp_customize->add_section( 'brand_section' , array(
+	// Adding customizer section for logo section
+	$wp_customize->add_section( 'logo_section' , array(
 		'capability'     	=> 'edit_theme_options',
 		'theme_supports' 	=> '',
 		'priority'				=> 11,
-		'title'						=> __( 'Brand Section', 'wonkasoft-theme' ),
-		'description'			=> __( 'Brand Section Options', 'wonkasoft-theme' ),
+		'title'						=> __( 'Logo Section', 'wonkasoft-theme' ),
+		'description'			=> __( 'Logo Section Options', 'wonkasoft-theme' ),
 		'panel'  					=> 'ft_theme_options',
 	) );
 	/**
@@ -422,12 +422,12 @@ function wonkasoft_theme_customize_register( $wp_customize ) {
 		) );
 
 			// Brand Logo Control
-		$wp_customize->add_control( new WP_Customize_Media_Control( 
+		$wp_customize->add_control( new WP_Customize_Image_Control( 
 			$wp_customize, 
 			'brand_section_logo_'.$i, 
 			array(
 			'label'      	=> __( 'Brand Section Logo '.$i, 'wonkasoft-theme' ),
-			'section'    	=> 'brand_section',
+			'section'    	=> 'logo_section',
 			'setting'   	=> 'brand_section_logo_'.$i,
 			'description'	=> 'Select Brand Logo '.$i,
 		) ) );

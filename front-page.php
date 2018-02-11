@@ -52,16 +52,17 @@ get_header(); ?>
 				<div class="col-sm">
 					<div class="row">
 					<div class="col-4 product-icon product-icon-left">
-						<i class="fa fa-wordpress"></i>
+						<?php $freatured_icon_1 = ( get_theme_mod( 'featured_section_icon_1' ) ) ? get_theme_mod( 'featured_section_icon_1' ) : 'wordpress'; ?>
+						<i class="fa fa-<?php echo $freatured_icon_1; ?>"></i>
 					</div> <!-- /product-icon -->
 			
 					<div class="col-8 product-copy">
 					<?php 
-						$first_product_title = ( get_theme_mod( 'first_product_title' ) ) ? get_theme_mod( 'first_product_title' ) : 'WordPress Themes'; 
-						$first_product_copy = ( get_theme_mod( 'first_product_copy' ) ) ? get_theme_mod( 'first_product_copy' ) : 'Message here'; 
+						$featured_title_1 = ( get_theme_mod( 'featured_title_1' ) ) ? get_theme_mod( 'featured_title_1' ) : 'WordPress Themes'; 
+						$featured_message_1 = ( get_theme_mod( 'featured_message_1' ) ) ? get_theme_mod( 'featured_message_1' ) : 'Message here'; 
 					?>
-						<h2 class="product-title"><?php echo $first_product_title; ?></h2>
-						<p class="copy-body"><?php echo $first_product_copy; ?></p>
+						<h2 class="product-title"><?php echo $featured_title_1; ?></h2>
+						<p class="copy-body"><?php echo $featured_message_1; ?></p>
 					</div> <!-- /product-copy -->
 				</div> <!-- /row -->
 				</div> <!-- /col-sm -->
@@ -69,16 +70,17 @@ get_header(); ?>
 				<div class="col-sm">
 					<div class="row">
 					<div class="col-4 product-icon product-icon-middle">
-						<i class="fa fa-plug"></i>
+							<?php $freatured_icon_2 = ( get_theme_mod( 'featured_section_icon_2' ) ) ? get_theme_mod( 'featured_section_icon_2' ) : 'plug'; ?>
+						<i class="fa fa-<?php echo $freatured_icon_2; ?>"></i>
 					</div> <!-- /product-icon -->
-					
+			
 					<div class="col-8 product-copy">
-					<?php
-						$second_product_title = ( get_theme_mod( 'second_product_title' ) ) ? get_theme_mod( 'second_product_title' ) : 'WordPress Plugins'; 
-						$second_product_copy = ( get_theme_mod( 'second_product_copy' ) ) ? get_theme_mod( 'second_product_copy' ) : 'Message here'; 
+					<?php 
+						$featured_title_2 = ( get_theme_mod( 'featured_title_2' ) ) ? get_theme_mod( 'featured_title_2' ) : 'WordPress Themes'; 
+						$featured_message_2 = ( get_theme_mod( 'featured_message_2' ) ) ? get_theme_mod( 'featured_message_2' ) : 'Message here'; 
 					?>
-						<h2 class="product-title"><?php echo $second_product_title; ?></h2>
-						<p class="copy-body"><?php echo $second_product_copy; ?></p>
+						<h2 class="product-title"><?php echo $featured_title_2; ?></h2>
+						<p class="copy-body"><?php echo $featured_message_2; ?></p>
 					</div> <!-- /product-copy -->
 				</div> <!-- /row -->
 				</div> <!-- /col-sm -->
@@ -86,16 +88,17 @@ get_header(); ?>
 				<div class="col-sm">
 					<div class="row">
 					<div class="col-4 product-icon product-icon-right">
-						<i class="fa fa-pencil-square-o"></i>
+								<?php $freatured_icon_3 = ( get_theme_mod( 'featured_section_icon_3' ) ) ? get_theme_mod( 'featured_section_icon_3' ) : 'pencil-square-o'; ?>
+						<i class="fa fa-<?php echo $freatured_icon_3; ?>"></i>
 					</div> <!-- /product-icon -->
-					
+			
 					<div class="col-8 product-copy">
 					<?php 
-						$third_product_title = ( get_theme_mod( 'third_product_title' ) ) ? get_theme_mod( 'third_product_title' ) : 'Custom Development'; 
-						$third_product_copy = ( get_theme_mod( 'third_product_copy' ) ) ? get_theme_mod( 'third_product_copy' ) : 'Message here'; 
-						?>
-						<h2 class="product-title"><?php echo $third_product_title; ?></h2>
-						<p class="copy-body"><?php echo $third_product_copy; ?></p>
+						$featured_title_3 = ( get_theme_mod( 'featured_title_3' ) ) ? get_theme_mod( 'featured_title_3' ) : 'Custom Development'; 
+						$featured_message_3 = ( get_theme_mod( 'featured_message_3' ) ) ? get_theme_mod( 'featured_message_3' ) : 'Message here'; 
+					?>
+						<h2 class="product-title"><?php echo $featured_title_3; ?></h2>
+						<p class="copy-body"><?php echo $featured_message_3; ?></p>
 					</div> <!-- /product-copy -->
 				</div> <!-- /row -->
 				</div> <!-- /col-sm -->
@@ -105,6 +108,28 @@ get_header(); ?>
 	<section id="logos-section">
 		<div class="container-fluid">
 			<div class="row">
+				<?php
+				$brand_section_logo_1 = ( get_theme_mod( 'brand_section_logo_1' ) ) ? get_theme_mod( 'brand_section_logo_1' ) : ''; 
+				$brand_section_logo_2 = ( get_theme_mod( 'brand_section_logo_2' ) ) ? get_theme_mod( 'brand_section_logo_2' ) : ''; 
+				$brand_section_logo_3 = ( get_theme_mod( 'brand_section_logo_3' ) ) ? get_theme_mod( 'brand_section_logo_3' ) : ''; 
+				$brand_section_logo_4 = ( get_theme_mod( 'brand_section_logo_4' ) ) ? get_theme_mod( 'brand_section_logo_4' ) : ''; 
+				$brand_section_logo_5 = ( get_theme_mod( 'brand_section_logo_5' ) ) ? get_theme_mod( 'brand_section_logo_5' ) : ''; 
+				?>
+				<div class="col-sm-2 text-center">
+					<img src="<?php echo $brand_section_logo_1; ?>" class="img-responsive block-center" alt="brand-logo" />
+				</div> <!-- /leftcol -->
+				<div class="col-sm-2 text-center">
+					<img src="<?php echo $brand_section_logo_2; ?>" class="img-responsive" alt="brand-logo" />
+				</div> <!-- /leftcol -->
+				<div class="col-sm-2 text-center">
+					<img src="<?php echo $brand_section_logo_3; ?>" class="img-responsive" alt="brand-logo" />
+				</div> <!-- /leftcol -->
+				<div class="col-sm-2 text-center">
+					<img src="<?php echo $brand_section_logo_4; ?>" class="img-responsive" alt="brand-logo" />
+				</div> <!-- /leftcol -->
+				<div class="col-sm-2 text-center">
+					<img src="<?php echo $brand_section_logo_5; ?>" class="img-responsive" alt="brand-logo" />
+				</div> <!-- /leftcol -->
 			</div> <!-- /row -->
 		</div> <!-- /container-fluid -->
 	</section> <!-- #logo-section -->
