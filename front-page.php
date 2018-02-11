@@ -115,19 +115,19 @@ get_header(); ?>
 				$brand_section_logo_4 = ( get_theme_mod( 'brand_section_logo_4' ) ) ? get_theme_mod( 'brand_section_logo_4' ) : ''; 
 				$brand_section_logo_5 = ( get_theme_mod( 'brand_section_logo_5' ) ) ? get_theme_mod( 'brand_section_logo_5' ) : ''; 
 				?>
-				<div class="col-sm-2 text-center">
+				<div class="col-sm text-center">
 					<img src="<?php echo $brand_section_logo_1; ?>" class="img-responsive block-center" alt="brand-logo" />
 				</div> <!-- /leftcol -->
-				<div class="col-sm-2 text-center">
+				<div class="col-sm text-center">
 					<img src="<?php echo $brand_section_logo_2; ?>" class="img-responsive" alt="brand-logo" />
 				</div> <!-- /leftcol -->
-				<div class="col-sm-2 text-center">
+				<div class="col-sm text-center">
 					<img src="<?php echo $brand_section_logo_3; ?>" class="img-responsive" alt="brand-logo" />
 				</div> <!-- /leftcol -->
-				<div class="col-sm-2 text-center">
+				<div class="col-sm text-center">
 					<img src="<?php echo $brand_section_logo_4; ?>" class="img-responsive" alt="brand-logo" />
 				</div> <!-- /leftcol -->
-				<div class="col-sm-2 text-center">
+				<div class="col-sm text-center">
 					<img src="<?php echo $brand_section_logo_5; ?>" class="img-responsive" alt="brand-logo" />
 				</div> <!-- /leftcol -->
 			</div> <!-- /row -->
@@ -138,7 +138,7 @@ get_header(); ?>
 			<div class="row services-title-row">
 				<div class="services-title"><h2>Our Services</h2></div>
 			</div> <!-- /row -->
-			<div class="row">
+			<div class="row services-items">
 				<div class="col-sm"></div>
 				<div class="col-sm"></div>
 				<div class="col-sm"></div>
@@ -148,6 +148,15 @@ get_header(); ?>
 	</section> <!-- #services-section -->
 	<section id="team-section">
 		<div class="container-fluid">
+			<div class="row bg-row">
+				<div class="col"></div>
+				<div class="col"></div>
+				<div class="col"></div>
+				<div class="col"></div>
+				<div class="col"></div>
+				<div class="col"></div>
+				<div class="col"></div>
+			</div> <!-- /row -->
 			<div class="row team-title-row">
 				<div class="team-title"><h2><b>Meet</b> the <b>Team</b></h2></div>
 			</div> <!-- /row -->
@@ -166,25 +175,84 @@ get_header(); ?>
 	</section> <!-- #team-section -->
 	<section id="work-section">
 		<div class="container-fluid">
+			<div class="row bg-row justify-content-around">
+				<div class="offset-1 bg-col"></div>
+				<div class="bg-col"></div>
+				<div class="offset-3 bg-col"></div>
+				<div class="bg-col"></div>
+				<div class="bg-col"></div>
+			</div> <!-- /row -->
+			<div class="row work-title-row">
+				<div class="work-title"><h2>Our Work</b></h2></div>
+			</div> <!-- /row -->
 			<div class="row">
+				<div class="col"></div>
+				<div class="col"></div>
+				<div class="col"></div>
+				<div class="col"></div>
+			</div> <!-- /row -->
+			<div class="row">
+				<div class="col"></div>
+				<div class="col"></div>
+				<div class="col"></div>
+				<div class="col"></div>
+			</div> <!-- /row -->
+			<div class="row">
+				<div class="col"></div>
 			</div> <!-- /row -->
 		</div> <!-- /container-fluid -->
 	</section> <!-- #work-section -->
 	<section id="responsive-section">
 		<div class="container-fluid">
-			<div class="row">
+			<div class="row bg-row justify-content-around">
+				<div class="bg-col"></div>
+				<div class="bg-col"></div>
+				<div class="bg-col"></div>
+				<div class="bg-col"></div>
+				<div class="bg-col"></div>
+				<div class="bg-col"></div>
+				<div class="bg-col"></div>
+				<div class="bg-col"></div>
+				<div class="bg-col"></div>
+				<div class="bg-col"></div>
 			</div> <!-- /row -->
 		</div> <!-- /container-fluid -->
 	</section> <!-- #responsive-section -->
 	<section id="vision-section">
 		<div class="container-fluid">
 			<div class="row">
+				<div class="col-sm">
+					<div class="row vision-title-row">
+						<div class="vision-title"><h2>Vision</h2></div>
+					</div> <!-- /row -->
+					<div class="row vision-copy-row">
+						<div class="vision-copy"><p>vision</p></div>
+					</div> <!-- /row -->
+				</div> <!-- /col-sm -->
+				<div class="col-sm">
+					<div class="row mission-title-row">
+						<div class="mission-title"><h2>Mission</h2></div>
+					</div> <!-- /row -->
+					<div class="row mission-copy-row">
+						<div class="mission-copy"><p>Mission</p></div>
+					</div> <!-- /row -->
+				</div> <!-- /col-sm -->
 			</div> <!-- /row -->
 		</div> <!-- /container-fluid -->
 	</section> <!-- #vision-section -->
 	<section id="testimonials-section">
 		<div class="container-fluid">
+			<div class="row bg-row justify-content-around">
+				<div class="bg-col"></div>
+				<div class="bg-col"></div>
+				<div class="bg-col"></div>
+			</div> <!-- /row -->
+			<div class="row testimonials-title-row">
+				<div class="testimonials-title"><h2>Testimonials</h2></div>
+			</div> <!-- /row -->
 			<div class="row">
+				<div class="col"></div>
+				<div class="col"></div>
 			</div> <!-- /row -->
 		</div> <!-- /container-fluid -->
 	</section> <!-- #testimonals-section -->
