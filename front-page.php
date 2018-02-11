@@ -221,7 +221,7 @@ get_header(); ?>
 	<section id="vision-section">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-sm">
+				<div class="col-sm vision-side">
 					<div class="row vision-title-row">
 						<div class="vision-title"><h2>Vision</h2></div>
 					</div> <!-- /row -->
@@ -229,7 +229,7 @@ get_header(); ?>
 						<div class="vision-copy"><p>vision</p></div>
 					</div> <!-- /row -->
 				</div> <!-- /col-sm -->
-				<div class="col-sm">
+				<div class="col-sm mission-side">
 					<div class="row mission-title-row">
 						<div class="mission-title"><h2>Mission</h2></div>
 					</div> <!-- /row -->
