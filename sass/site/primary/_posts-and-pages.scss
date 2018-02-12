@@ -167,7 +167,7 @@ section {
 
 #services-section {
 	position: relative;
-	height: 375px;
+	height: 400px;
 	&:before {
 		content: "";
 		position: absolute;
@@ -207,9 +207,26 @@ section {
 		}
 		> div > .service-item {
 			position: relative;
-			top: 50%;
-			left: 55%;
+			top: 60%;
+			left: 50%;
+			padding: 15px;
+			text-align: center;
 			@include prefix( transform, translate(-50%, -50%), webkit moz o );
+			i {
+				margin-bottom: 15px;
+				color: #fff;
+				height: 100px;
+				width: 100px;
+				padding: 15px;
+				text-align: center;
+				font-size: 45px;
+				line-height: 1.5;
+				border-radius: 50%;
+				background: $header__background;
+			}
+			h3 {
+				font-weight: 700;
+			}
 		}
 	}
 }
@@ -437,12 +454,22 @@ section {
 				}
 				.vision-copy-row {
 					margin: auto;
+					.vision-copy {
+						background: rgba(#fff, 0.3);
+						margin: 25px auto;
+						padding: 15px;
+						width: 50%;
+						color: #000;
+						font-weight: 800;
+						p {
+							margin: 0;
+						}
+					}
 				}
 			}
 			.mission-side {
 				border-left: 2px dashed #fff;
 				background: $product__topborder;
-				text-align: right;
 				.mission-title-row {
 					margin-top: 25px;
 					.mission-title {
@@ -459,6 +486,17 @@ section {
 				.mission-copy-row {
 					clear: both;
 					margin: auto;
+					.mission-copy {
+						background: rgba(#fff, 0.3);
+						margin: 25px auto;
+						padding: 15px;
+						width: 50%;
+						color: #000;
+						font-weight: 800;
+						p {
+							margin: 0;
+						}
+					}
 				}
 			}
 		}
@@ -532,12 +570,23 @@ section {
 		background: #e0e0e0;
 		z-index: 100;
 	}
-	.container-fluid, .container-fluid > .row:not(:first-child) {
+	.recent-post-bg {
+		position: absolute;
 		height: 100%;
-		.row:last-child {
-			position: absolute;
-			top: 0;
-			width: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		.first-col {
+			height: 100%;
+		}
+		.center-col {
+			height: 100%;
+			width: 27%;
+			background: #e0e0e0;
+			@include prefix( transform, matrix(1,0,-0.5,1,0,0), webkit moz o );
+		}
+		.last-col {
+			height: 100%;
 		}
 	}
 	.section-title {
@@ -550,18 +599,6 @@ section {
 		font-size: 34px;
 		font-weight: 800;
 		text-transform: uppercase;
-	}
-	.first-col {
-		height: 100%;
-	}
-	.center-col {
-		height: 100%;
-		width: 27%;
-		background: #e0e0e0;
-		@include prefix( transform, matrix(1,0,-0.5,1,0,0), webkit moz o );
-	}
-	.last-col {
-		height: 100%;
 	}
 }
 

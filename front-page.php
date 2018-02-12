@@ -368,13 +368,13 @@ get_header(); ?>
 	</section> <!-- #testimonals-section -->
 	<section id="recent-post-section">
 		<div class="container-fluid">
-			<div class="row">
-				<div class="section-title"><h2>Recent Posts</h2></div>
-			</div> <!-- /row -->
-			<div class="row">
+			<div class="row recent-post-bg">
 				<div class="col first-col"></div>
 				<div class="center-col"></div>
 				<div class="col last-col"></div>
+			</div> <!-- /row -->
+			<div class="row">
+				<div class="section-title"><h2>Recent Posts</h2></div>
 			</div> <!-- /row -->
 		</div> <!-- /container-fluid -->
 	</section> <!-- #recent-post-section -->
