@@ -140,6 +140,7 @@ get_header(); ?>
 			</div> <!-- /row -->
 			<div class="row services-items">
 				<div class="col-sm">
+					<div class="service-item">
 					<?php
 					/**
 					 * Loading Theme mods for module 1
@@ -161,8 +162,10 @@ get_header(); ?>
 							<?php echo $services_section_message_1; ?>
 						</p>
 					</div> <!-- /service-copy -->
+					</div> <!-- /service-item -->
 				</div> <!-- /col-sm -->
 				<div class="col-sm">
+					<div class="service-item">
 					<?php
 					/**
 					 * Loading Theme mods for module 2
@@ -185,7 +188,9 @@ get_header(); ?>
 						</p>
 					</div> <!-- /service-copy -->
 				</div>
+				</div>
 				<div class="col-sm">
+<div class="service-item">
 					<?php
 					/**
 					 * Loading Theme mods for module 3
@@ -207,8 +212,10 @@ get_header(); ?>
 							<?php echo $services_section_message_3; ?>
 						</p>
 					</div> <!-- /service-copy -->
+					</div> <!-- /service-item -->
 				</div>
 				<div class="col-sm">
+					<div class="service-item">
 					<?php
 					/**
 					 * Loading Theme mods for module 4
@@ -230,7 +237,8 @@ get_header(); ?>
 							<?php echo $services_section_message_4; ?>
 						</p>
 					</div> <!-- /service-copy -->
-				</div>
+				</div> <!-- /col-sm -->
+				</div> <!-- /service-item -->
 			</div> <!-- /row -->
 		</div> <!-- /container-fluid -->
 	</section> <!-- #services-section -->
@@ -325,7 +333,7 @@ get_header(); ?>
 					</div> <!-- /row -->
 				</div> <!-- /col-sm -->
 				<div class="col-sm mission-side">
-					<div class="row mission-title-row">
+					<div class="row mission-title-row pull-right">
 						<div class="mission-title"><h2>Mission</h2></div>
 					</div> <!-- /row -->
 					<div class="row mission-copy-row">

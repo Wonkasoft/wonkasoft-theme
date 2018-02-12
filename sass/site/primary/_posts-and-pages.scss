@@ -197,6 +197,20 @@ section {
 	.services-items {
 		position: absolute;
 		top: 0;
+		height: 100%;
+		width: 100%;
+		> div:nth-child(2n+1) {
+			background: $product__topborder;
+		}
+		> div:nth-child(2n) {
+			background: $nav__background;
+		}
+		> div > .service-item {
+			position: relative;
+			top: 50%;
+			left: 55%;
+			@include prefix( transform, translate(-50%, -50%), webkit moz o );
+		}
 	}
 }
 
@@ -421,6 +435,9 @@ section {
 						}
 					}
 				}
+				.vision-copy-row {
+					margin: auto;
+				}
 			}
 			.mission-side {
 				border-left: 2px dashed #fff;
@@ -429,7 +446,6 @@ section {
 				.mission-title-row {
 					margin-top: 25px;
 					.mission-title {
-						display: inline-block;
 						padding: 10px 25px;
 						background: $nav__background;
 						h2 {
@@ -439,6 +455,10 @@ section {
 							font-weight: 700;
 						}
 					}
+				}
+				.mission-copy-row {
+					clear: both;
+					margin: auto;
 				}
 			}
 		}
