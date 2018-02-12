@@ -65,11 +65,16 @@ section {
 				background: rgba(#fff, 0.7);
 			}
 			.wonka-btn {
+				position: absolute;
+				left: 10%;
 				border-radius: 0;
-				padding: 15px 30px;
-				font-size: 26px;
+				padding: 8px 25px;
+				font-size: 20px;
 				font-family: Open Sans;
 				font-weight: 800;
+				border: none;
+				color: $header__background;
+				background: $product__sectionlite;
 			}
 		}
 		img {
