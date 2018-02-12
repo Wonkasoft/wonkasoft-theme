@@ -376,7 +376,7 @@ get_header(); ?>
 			<div class="row">
 				<div class="section-title"><h2>Recent Posts</h2></div>
 			</div> <!-- /row -->
-			<div class="row">
+			<div class="row recent-post-items">
 				<?php 
 				   // the query
 				   $the_query = new WP_Query( array(
@@ -387,9 +387,9 @@ get_header(); ?>
 				  while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 						<div class="col">
 							<div class="blog-post">
-								<h2><?php the_title(); ?></h2>
+								<h3><?php the_title(); ?></h3>
 								<?php the_excerpt(); ?>
-								<a href="<?php echo get_permalink(); ?>">Read Blog</a>
+								<a class="btn btn-sm wonka-btn" href="<?php echo get_permalink(); ?>">Learn More</a>
 							</div>
 						</div>
 				  <?php
@@ -398,9 +398,6 @@ get_header(); ?>
 				 else : ?>
 				  <p><?php __('No News'); ?></p>
 				<?php endif; ?>
-			</div> <!-- /row -->
-			<div class="row">
-				<div class="section-title"><h2>Recent Posts</h2></div>
 			</div> <!-- /row -->
 		</div> <!-- /container-fluid -->
 	</section> <!-- #recent-post-section -->

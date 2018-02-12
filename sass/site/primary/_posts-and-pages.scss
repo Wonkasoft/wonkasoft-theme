@@ -592,13 +592,37 @@ section {
 	.section-title {
 		background: #e0e0e0;
 		padding: 10px 20px;
+		h2 {
+			white-space: nowrap;
+			color: #3cc2a5;
+			font-size: 34px;
+			font-weight: 800;
+			text-transform: uppercase;
+		}
 	}
-	h2 {
-		white-space: nowrap;
-		color: #3cc2a5;
-		font-size: 34px;
-		font-weight: 800;
-		text-transform: uppercase;
+	.recent-post-items {
+		.blog-post {
+			text-align: center;
+			padding: 30px;
+			h3 {
+				color: #000;
+				font-weight: 800;
+			}
+			.wonka-btn {
+				color: $header__background;
+				padding: 10px 25px;
+				border-radius: 4px;
+				text-transform: uppercase;
+				font-weight: 800;
+				background: transparent;
+				border: 1px solid $header__background;
+				&:hover, &:active, &:focus {
+					color: #fff;
+					text-decoration: none;
+					background: $header__background;
+				}
+			}
+		}
 	}
 }
 
