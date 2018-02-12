@@ -385,7 +385,7 @@ get_header(); ?>
 				   
 					 if ( $the_query->have_posts() ) : 
 				  while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-						<div class="col">
+						<div class="col text-center">
 							<div class="blog-post">
 								<h3><?php the_title(); ?></h3>
 								<?php the_excerpt(); ?>
