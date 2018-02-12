@@ -139,10 +139,98 @@ get_header(); ?>
 				<div class="services-title"><h2>Our Services</h2></div>
 			</div> <!-- /row -->
 			<div class="row services-items">
-				<div class="col-sm"></div>
-				<div class="col-sm"></div>
-				<div class="col-sm"></div>
-				<div class="col-sm"></div>
+				<div class="col-sm">
+					<?php
+					/**
+					 * Loading Theme mods for module 1
+					 * @var [string]
+					 * @since  1.0.0 [<init>]
+					 */
+					$services_section_icon_1 = ( get_theme_mod( 'services_section_icon_1' ) ) ? get_theme_mod( 'services_section_icon_1' ) : 'tasks'; 
+					$services_section_title_1 = ( get_theme_mod( 'services_section_title_1' ) ) ? get_theme_mod( 'services_section_title_1' ) : 'Custom Software & Apps'; 
+					$services_section_message_1= ( get_theme_mod( 'services_section_message_1' ) ) ? get_theme_mod( 'services_section_message_1' ) : 'Enter something about this service'; 
+					?>
+					<div class="service-icon">
+						<i class="fa fa-<?php echo $services_section_icon_1; ?>"></i>
+					</div> <!-- /service-icon -->
+					<div class="service-title">
+						<h3><?php echo $services_section_title_1; ?></h3>
+					</div> <!-- /service-title -->
+					<div class="service-copy">
+						<p>
+							<?php echo $services_section_message_1; ?>
+						</p>
+					</div> <!-- /service-copy -->
+				</div> <!-- /col-sm -->
+				<div class="col-sm">
+					<?php
+					/**
+					 * Loading Theme mods for module 2
+					 * @var [string]
+					 * @since  1.0.0 [<init>]
+					 */
+					$services_section_icon_2 = ( get_theme_mod( 'services_section_icon_2' ) ) ? get_theme_mod( 'services_section_icon_2' ) : 'tasks'; 
+					$services_section_title_2 = ( get_theme_mod( 'services_section_title_2' ) ) ? get_theme_mod( 'services_section_title_2' ) : 'Custom Software & Apps'; 
+					$services_section_message_2= ( get_theme_mod( 'services_section_message_2' ) ) ? get_theme_mod( 'services_section_message_2' ) : 'Enter something about this service'; 
+					?>
+					<div class="service-icon">
+						<i class="fa fa-<?php echo $services_section_icon_2; ?>"></i>
+					</div> <!-- /service-icon -->
+					<div class="service-title">
+						<h3><?php echo $services_section_title_2; ?></h3>
+					</div> <!-- /service-title -->
+					<div class="service-copy">
+						<p>
+							<?php echo $services_section_message_2; ?>
+						</p>
+					</div> <!-- /service-copy -->
+				</div>
+				<div class="col-sm">
+					<?php
+					/**
+					 * Loading Theme mods for module 3
+					 * @var [string]
+					 * @since  1.0.0 [<init>]
+					 */
+					$services_section_icon_3 = ( get_theme_mod( 'services_section_icon_3' ) ) ? get_theme_mod( 'services_section_icon_3' ) : 'tasks'; 
+					$services_section_title_3 = ( get_theme_mod( 'services_section_title_3' ) ) ? get_theme_mod( 'services_section_title_3' ) : 'Custom Software & Apps'; 
+					$services_section_message_3= ( get_theme_mod( 'services_section_message_3' ) ) ? get_theme_mod( 'services_section_message_3' ) : 'Enter something about this service'; 
+					?>
+					<div class="service-icon">
+						<i class="fa fa-<?php echo $services_section_icon_3; ?>"></i>
+					</div> <!-- /service-icon -->
+					<div class="service-title">
+						<h3><?php echo $services_section_title_3; ?></h3>
+					</div> <!-- /service-title -->
+					<div class="service-copy">
+						<p>
+							<?php echo $services_section_message_3; ?>
+						</p>
+					</div> <!-- /service-copy -->
+				</div>
+				<div class="col-sm">
+					<?php
+					/**
+					 * Loading Theme mods for module 4
+					 * @var [string]
+					 * @since  1.0.0 [<init>]
+					 */
+					$services_section_icon_4 = ( get_theme_mod( 'services_section_icon_4' ) ) ? get_theme_mod( 'services_section_icon_4' ) : 'tasks'; 
+					$services_section_title_4 = ( get_theme_mod( 'services_section_title_4' ) ) ? get_theme_mod( 'services_section_title_4' ) : 'Custom Software & Apps'; 
+					$services_section_message_4= ( get_theme_mod( 'services_section_message_4' ) ) ? get_theme_mod( 'services_section_message_4' ) : 'Enter something about this service'; 
+					?>
+					<div class="service-icon">
+						<i class="fa fa-<?php echo $services_section_icon_4; ?>"></i>
+					</div> <!-- /service-icon -->
+					<div class="service-title">
+						<h3><?php echo $services_section_title_4; ?></h3>
+					</div> <!-- /service-title -->
+					<div class="service-copy">
+						<p>
+							<?php echo $services_section_message_4; ?>
+						</p>
+					</div> <!-- /service-copy -->
+				</div>
 			</div> <!-- /row -->
 		</div> <!-- /container-fluid -->
 	</section> <!-- #services-section -->
@@ -226,7 +314,14 @@ get_header(); ?>
 						<div class="vision-title"><h2>Vision</h2></div>
 					</div> <!-- /row -->
 					<div class="row vision-copy-row">
-						<div class="vision-copy"><p>vision</p></div>
+						<div class="vision-copy">
+							<p>
+								<?php
+								$brand_message_vision = ( get_theme_mod( 'brand_message_vision' ) ) ? get_theme_mod( 'brand_message_vision' ) : 'Enter your company vision here'; 
+								echo $brand_message_vision;
+								?>
+							</p>
+						</div> <!-- /vision-copy -->
 					</div> <!-- /row -->
 				</div> <!-- /col-sm -->
 				<div class="col-sm mission-side">
@@ -234,7 +329,14 @@ get_header(); ?>
 						<div class="mission-title"><h2>Mission</h2></div>
 					</div> <!-- /row -->
 					<div class="row mission-copy-row">
-						<div class="mission-copy"><p>Mission</p></div>
+						<div class="mission-copy">
+							<p>
+								<?php
+								$brand_message_mission = ( get_theme_mod( 'brand_message_mission' ) ) ? get_theme_mod( 'brand_message_mission' ) : 'Enter your company mission here'; 
+								echo $brand_message_mission;
+								?>
+							</p>
+						</div> <!-- /mission-copy -->
 					</div> <!-- /row -->
 				</div> <!-- /col-sm -->
 			</div> <!-- /row -->

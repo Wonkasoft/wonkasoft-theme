@@ -169,6 +169,21 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Register all theme widgets
+ */
+require get_parent_theme_file_path('/inc/theme-widget-setup.php');
+
+/**
+ * Meet the team widgets
+ */
+require get_parent_theme_file_path( '/inc/team-widget.php' );
+
+/**
+ * Customer Testimonials widgets
+ */
+require get_parent_theme_file_path( '/inc/testimonials-widget.php' );
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {

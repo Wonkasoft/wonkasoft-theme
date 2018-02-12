@@ -421,7 +421,7 @@ function wonkasoft_theme_customize_register( $wp_customize ) {
 			'transport' => 'refresh',
 		) );
 
-			// Brand Logo Control
+			// Brand Logo ControlOur mission is to provide exceptional custom solutions to a wide range of industries in need of digital development services. Using the latest technology and outstanding talents, we help people build their brand with custom software, maintenance, and digital marketing.
 		$wp_customize->add_control( new WP_Customize_Image_Control( 
 			$wp_customize, 
 			'brand_section_logo_'.$i, 
