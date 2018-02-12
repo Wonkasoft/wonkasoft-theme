@@ -351,7 +351,7 @@ function wonkasoft_theme_customize_register( $wp_customize ) {
 			'section'    	=> 'featured_section',
 			'setting'   	=> 'featured_section_icon_'.$i,
 			'type'				=> 'text',
-			'description'	=> 'Select featured icon '.$i.'<br />example:fa-facebook',
+			'description'	=> 'Select featured icon '.$i.'<br />example: facebook',
 		) ) );
 
 		// Featured item title Setting
@@ -471,7 +471,7 @@ function wonkasoft_theme_customize_register( $wp_customize ) {
 			'section'    	=> 'services_section',
 			'setting'   	=> 'services_section_icon_'.$i,
 			'type'				=> 'text',
-			'description'	=> 'Select service icon '.$i.'<br />example:fa-briefcase',
+			'description'	=> 'Select service icon '.$i.'<br />example: briefcase',
 		) ) );
 
 		// Our Services Title Setting

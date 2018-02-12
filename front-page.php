@@ -368,13 +368,36 @@ get_header(); ?>
 	</section> <!-- #testimonals-section -->
 	<section id="recent-post-section">
 		<div class="container-fluid">
+			<div class="row recent-post-bg">
+			<div class="col first-col"></div>
+			<div class="center-col"></div>
+			<div class="col last-col"></div>
+			</div> <!-- /row -->
 			<div class="row">
 				<div class="section-title"><h2>Recent Posts</h2></div>
 			</div> <!-- /row -->
 			<div class="row">
-				<div class="col first-col"></div>
-				<div class="center-col"></div>
-				<div class="col last-col"></div>
+				<?php 
+				   // the query
+				   $the_query = new WP_Query( array(
+				      'posts_per_page' => 3,
+				   )); 
+				   
+					 if ( $the_query->have_posts() ) : 
+				  while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+						<div class="col">
+							<div class="blog-post">
+								<h2><?php the_title(); ?></h2>
+								<?php the_excerpt(); ?>
+								<a href="<?php echo get_permalink(); ?>">Read Blog</a>
+							</div>
+						</div>
+				  <?php
+				   endwhile; 
+				   wp_reset_postdata();
+				 else : ?>
+				  <p><?php __('No News'); ?></p>
+				<?php endif; ?>
 			</div> <!-- /row -->
 		</div> <!-- /container-fluid -->
 	</section> <!-- #recent-post-section -->
