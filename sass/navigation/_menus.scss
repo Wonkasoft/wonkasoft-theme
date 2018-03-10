@@ -1,6 +1,7 @@
 .row-w-nav {
 	background: $nav__background;
 	position: relative;
+
 	&:before {
 		content: "";
 		position: absolute;
@@ -11,16 +12,20 @@
 		background: #fff;
 		z-index: 100;
 	}
+
 	.account-links {
 		position: relative;
+
 		a {
 			margin: 0 -1px;
-			transform: matrix(1,0,0,1,0,0);
+			transform: matrix(1, 0, 0, 1, 0, 0);
 		}
+
 		.wonka-btn {
 			border-radius: 0;
 			padding: 24px;
 		}
+
 		i {
 			position: absolute;
 			font-size: 34px;
@@ -30,6 +35,7 @@
 			cursor: pointer;
 			transform: translate(-50%, -50%);
 		}
+
 		form {
 			position: absolute;
 			display: inline-block;
@@ -37,10 +43,14 @@
 			height: 100%;
 			right: 0;
 			float: right;
+
 			label {
 				margin: 0;
 			}
+
 			input[type="search"] {
+				@include prefix(box-shadow, 2px 6px 6px 1px rgba(0, 0, 0, .5), webkit moz o);
+				@include prefix(transition, all .2s ease-in-out, webkit moz o);
 				display: none;
 				opacity: 0;
 				left: 100%;
@@ -50,10 +60,9 @@
 				line-height: 1.5;
 				border-radius: 0;
 				padding: 15px;
-				@include prefix( box-shadow, 2px 6px 6px 1px rgba(0,0,0,0.5), webkit moz o );
-				@include prefix( transition, all 0.2s ease-in-out, webkit moz o );
 				z-index: 999;
 			}
+
 			input[type="submit"] {
 				display: none;
 			}
@@ -69,6 +78,7 @@
 	.menu-main-container {
 		height: 71px;
 	}
+
 	ul {
 		display: none;
 		list-style: none;
@@ -77,7 +87,7 @@
 		text-align: justify;
 
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			box-shadow: 0 3px 3px rgba(0, 0, 0, .2);
 			float: left;
 			position: absolute;
 			top: 100%;
@@ -126,6 +136,7 @@
 	}
 
 	a {
+		@include prefix(transition, all .2s ease-in-out, webkit moz o);
 		display: block;
 		text-decoration: none;
 		color: $header__background;
@@ -134,7 +145,6 @@
 		font-size: 24px;
 		text-transform: uppercase;
 		padding: 20px 25px;
-		@include prefix( transition, all 0.2s ease-in-out, webkit moz o);
 	}
 
 	.current_page_item > a,
@@ -154,8 +164,11 @@
 	.menu-toggle {
 		display: none;
 	}
+
 	.main-navigation ul {
-		display: inline-block;
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
 	}
 }
 

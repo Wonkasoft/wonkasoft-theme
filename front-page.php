@@ -312,7 +312,12 @@ get_header(); ?>
 				<div class="bg-col"></div>
 				<div class="bg-col"></div>
 			</div> <!-- /row -->
-		</div> <!-- /container-fluid -->
+			<div class="row">
+				<div class="col">
+
+				</div>
+				</div>
+			</div> <!-- /container-fluid -->
 	</section> <!-- #responsive-section -->
 	<section id="vision-section">
 		<div class="container-fluid">
