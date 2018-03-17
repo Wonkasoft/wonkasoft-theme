@@ -70,12 +70,18 @@
 			?>
 		</div><!-- .site-info -->
 		<div class="col-6 social-icons text-center">
-				<i class="fa fa-facebook"></i>
-				<i class="fa fa-twitter"></i>
-				<i class="fa fa-instagram"></i>
-				<i class="fa fa-yelp"></i>
-				<i class="fa fa-git"></i>
-				<i class="fa fa-wordpress"></i>
+					<?php $facebook_icon_footer = ( get_theme_mod( 'header_social_facebook' ) ) ? '<a href="'.get_theme_mod( 'header_social_facebook' ).'" target="_blank"><i class="fa fa-facebook"></i></a>' : ''; ?>
+				<?php echo $facebook_icon_footer;?>
+				<?php $twitter_icon_footer = ( get_theme_mod( 'header_social_twitter' ) ) ? '<a href="'.get_theme_mod( 'header_social_twitter' ).'" target="_blank"><i class="fa fa-twitter"></i></a>' : ''; ?>
+				<?php echo $twitter_icon_footer;?>
+				<?php $instagram_icon_footer = ( get_theme_mod( 'header_social_instagram' ) ) ? '<a href="'.get_theme_mod( 'header_social_instagram' ).'" target="_blank"><i class="fa fa-instagram"></i></a>' : ''; ?>
+				<?php echo $instagram_icon_footer;?>
+				<?php $yelp_icon_footer = ( get_theme_mod( 'header_social_yelp' ) ) ? '<a href="'.get_theme_mod( 'header_social_yelp' ).'" target="_blank"><i class="fa fa-yelp"></i></a>' : ''; ?>
+				<?php echo $yelp_icon_footer;?>
+				<?php $git_icon_footer = ( get_theme_mod( 'header_social_git' ) ) ? '<a href="'.get_theme_mod( 'header_social_git' ).'" target="_blank"><i class="fa fa-git"></i></a>' : ''; ?>
+				<?php echo $git_icon_footer;?>
+				<?php $wordpress_icon_footer = ( get_theme_mod( 'header_social_wordpress' ) ) ? '<a href="'.get_theme_mod( 'header_social_wordpress' ).'" target="_blank"><i class="fa fa-wordpress"></i></a>' : ''; ?>
+				<?php echo $wordpress_icon_footer;?>
 			</div> <!-- /social-icons -->
 		</div> <!-- /row -->
 	</div> <!-- /container -->

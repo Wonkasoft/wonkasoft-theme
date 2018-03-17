@@ -26,13 +26,13 @@ class Testimonials_Widget extends WP_Widget {
       'profile_picture' => '', 
       'customer_name' => '', 
       'customer_comment' => '', 
-      'social_referral' => '', 
+      'review_source' => '', 
       ));
     $custom_id = $instance['id'];
     $profile_picture = $instance['profile_picture'];
     $customer_name = sanitize_text_field($instance['customer_name']);
     $customer_comment = sanitize_text_field($instance['customer_comment']);
-    $social_referral = sanitize_text_field($instance['social_referral']);
+    $review_source = sanitize_text_field($instance['review_source']);
     ?>
 
   <!-- Input -->
@@ -52,8 +52,8 @@ class Testimonials_Widget extends WP_Widget {
   <label for="<?php echo $this->get_field_id('customer_comment'); ?>"><?php _e('Comments:'); ?></label> 
   <input class="widefat" id="<?php echo $this->get_field_id('customer_comment'); ?>" name="<?php echo $this->get_field_name('customer_comment'); ?>" type="text" value="<?php echo esc_attr($customer_comment); ?>" />
   
-  <label for="<?php echo $this->get_field_id('social_referral'); ?>"><?php _e('Social Platform:'); ?></label> 
-  <select class="widefat" id="<?php echo $this->get_field_id('social_referral'); ?>" name="<?php echo $this->get_field_name('social_referral'); ?>">
+  <label for="<?php echo $this->get_field_id('review_source'); ?>"><?php _e('Social Platform:'); ?></label> 
+  <select class="widefat" id="<?php echo $this->get_field_id('review_source'); ?>" name="<?php echo $this->get_field_name('review_source'); ?>">
     <option value="facebook">Facebook</option>  
     <option value="twitter">Twitter</option>  
     <option value="instagram">Instagram</option>  
@@ -68,13 +68,13 @@ class Testimonials_Widget extends WP_Widget {
       'profile_picture' => '', 
       'customer_name' => '', 
       'customer_comment' => '', 
-      'social_referral' => '',  
+      'review_source' => '',  
       ));
     $instance['id'] = $new_instance['id'];
     $instance['profile_picture'] = $new_instance['profile_picture'];
     $instance['customer_name'] = sanitize_text_field($new_instance['customer_name']);
     $instance['customer_comment'] = sanitize_text_field($new_instance['customer_comment']);
-    $instance['social_referral'] = sanitize_text_field($new_instance['social_referral']);
+    $instance['review_source'] = sanitize_text_field($new_instance['review_source']);
     return $instance;
   }
   // front-end
@@ -83,7 +83,7 @@ class Testimonials_Widget extends WP_Widget {
     $profile_picture = isset($instance['profile_picture']) ? $instance['profile_picture'] : false;
     $customer_name = isset($instance['customer_name']) ? $instance['customer_name'] : false;
     $customer_comment = isset($instance['customer_comment']) ? $instance['customer_comment'] : false;
-    $social_referral = isset($instance['social_referral']) ? $instance['social_referral'] : false;
+    $review_source = isset($instance['review_source']) ? $instance['review_source'] : false;
 
     //widget is parsed
     if (wp_get_sidebars_widgets()['social'][0] == $this->id) {
@@ -95,7 +95,7 @@ class Testimonials_Widget extends WP_Widget {
      <!--Card-->
      <div class="card">
        <!--Background color-->
-       <div class="card-up <?php echo $social_referral; ?>">
+       <div class="card-up <?php echo $review_source; ?>">
        </div>
        <?php 
          if ($profile_picture == null) {
@@ -112,7 +112,7 @@ class Testimonials_Widget extends WP_Widget {
      ?>
        <div class="card-block">
          <!--Name-->
-         <h4 class="card-title"><i class="ws ws-<?php echo $social_referral;?>";" aria-hidden="true"></i> <?php echo $customer_name;?></h4>
+         <h4 class="card-title"><i class="ws ws-<?php echo $review_source;?>";" aria-hidden="true"></i> <?php echo $customer_name;?></h4>
          <hr>
          <!--Quotation-->
          <p><i class="ws ws-quotes"></i> <?php echo $customer_comment;?></p>
@@ -133,7 +133,7 @@ class Testimonials_Widget extends WP_Widget {
      <!--Card-->
      <div class="card">
        <!--Background color-->
-       <div class="card-up <?php echo $social_referral; ?>">
+       <div class="card-up <?php echo $review_source; ?>">
        </div>
        <?php 
          if ($profile_picture == null) {
@@ -150,7 +150,7 @@ class Testimonials_Widget extends WP_Widget {
      ?>
        <div class="card-block">
          <!--Name-->
-         <h4 class="card-title"><i class="ws ws-<?php echo $social_referral;?>";" aria-hidden="true"></i> <?php echo $customer_name;?></h4>
+         <h4 class="card-title"><i class="ws ws-<?php echo $review_source;?>";" aria-hidden="true"></i> <?php echo $customer_name;?></h4>
          <hr>
          <!--Quotation-->
          <p><i class="ws ws-quotes"></i> <?php echo $customer_comment;?></p>
