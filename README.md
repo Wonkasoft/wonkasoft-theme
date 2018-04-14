@@ -1,6 +1,6 @@
 # [Wonkasoft](http://wonkasoft.com/wonkasoft-theme)
 
-Custom Built for KeepCalmHomeBuyers
+Custom Built for Wonkasoft
 
 * Project: [github.com/wonkasoft/wonkasoft-theme](https://github.com/wonkasoft/wonkasoft-theme)
 * Website: [wonkasoft.com](http://wonkasoft.com)
