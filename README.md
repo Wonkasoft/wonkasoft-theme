@@ -1,23 +1,68 @@
-[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
+# [Wonkasoft](http://wonkasoft.com/wonkasoft-theme)
 
-Wonkatron
-===
+Custom Built for Wonkasoft
 
-Hi. I'm a starter theme called `Wonkatron`. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+* Project: [github.com/wonkasoft/wonkasoft-theme](https://github.com/wonkasoft/wonkasoft-theme)
+* Website: [wonkasoft.com](http://wonkasoft.com)
+* Twitter: [@wonkasoft](http://twitter.com/wonkasoft)
+* Author : [Louis Lister](http://wonkasoft.com) // [@devturtle](http://twitter.com/devturtle2015)
+* Author : [Rudy Lister](http://wonkasoft.com) // [@WILvoiceDERNESS](http://twitter.com/WILvoiceDERNESS)
 
-My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
+## Contributors (in order of pull request)
+[Louis Lister](https://github.com/llister15), [Rudy Lister](https://github.com/MrLister)
 
-* A just right amount of lean, well-commented, modern, HTML5 templates.
-* A helpful 404 template.
-* A custom header implementation in `inc/custom-header.php` just add the code snippet found in the comments of `inc/custom-header.php` to your `header.php` template.
-* Custom template tags in `inc/template-tags.php` that keep your templates clean and neat and prevent code duplication.
-* Some small tweaks in `inc/template-functions.php` that can improve your theming experience.
-* A script at `js/navigation.js` that makes your menu a toggled dropdown on small screens (like your phone), ready for CSS artistry. It's enqueued in `functions.php`.
-* 2 sample CSS layouts in `layouts/` for a sidebar on either side of your content.
-* Smartly organized starter CSS in `style.css` that will help you to quickly get your design off the ground.
-* Licensed under GPLv2 or later. :) Use it to make something cool.
 
-Getting Started
----------------
+## Features
 
-If you want to keep it simple.
+### HTML5
+* Basic Semantic HTML5 Markup
+* W3C Valid Code Foundations
+* Responsive Ready, ViewPort meta data
+* HTML Class support for IE7, IE8, IE9 Conditionals
+* Clean, neatly organised code, with PHP annotations
+
+### jQuery + JavaScript
+* Replaced built-in WordPress enqueue with Google CDN
+* Protocol relative jQuery if Google CDN offline
+* Conditionizr for cross-platform/device detects and enhancements
+* Modernizr feature detection, HTML5 element support for legacy, progressive enhancement
+* DOM Ready JavaScript file setup (scripts.js) for instant JavaScript development
+* JavaScript files enqueued using WordPress functions into wp_head
+
+### CSS3
+* Underscores reset
+* Media Queries framework for instant development using @media
+* @font-face empty framework with Fonts folder setup ready for new custom fonts
+* CSS3 custom selection styles
+* Inline print styles (Underscores)
+* Body element config, including Optimize Legibility for kerning and font-smoothing
+* Replaced focus styles to avoid blue blur in field elements, replaced with border
+* Stylesheet enqueued using WordPress functions into wp_head
+* Sass templates for easy updates
+
+### Preloaded Functions (functions.php)
+* Enqueue Scripts functions setup
+* Enqueue Styles functions setup
+* WooCommerce theme support added
+* Dynamic WordPress Menu Navigation Support, preloaded with 3 Dynamic menus
+* Cleaned up dynamic nav output (Remove outer 'div')
+* Remove all injected classes from nav items, ID's, Page ID's
+* Custom Post Type x1 preloaded for demonstration, supporting: Category, Tags, Post Thumbnails, Excerpts
+* Dynamic Sidebar with x2 Widget Areas, and sidebar.php setup
+* WordPress Thumbnail Support, no Plugin image cropping, custom Arrays and Thumbnail settings
+* Custom Excerpt callbacks, with changeable callback numbers
+* Replaced 'Read More' button for custom Excerpt callbacks
+* Demo Shortcodes included, with Nested Shortcode capability
+* Add Slug to body class (Starkers Theme credit)
+* wp_head functions stripped right down, remove excess injected junk
+* All functions annotated, categorised into sections, filters, actions, shortcodes etc.
+* Space for development, neatly organised code with Modules/External files
+
+### Theme Files and Functionality
+* Built in Pagination, no plugins (strips out prev + next post and gives page numbers)
+* Widget Area Sidebar support, functions in place to get developing
+* Custom Search Form included (searchform.php) - fully editable
+* Tags support for showing Post Tags
+* Category support for showing the Category of post
+* Home page customizer options
+* Author support showing the author
